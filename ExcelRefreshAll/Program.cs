@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 using Microsoft.Office.Interop.Excel;
 using System.Diagnostics;
 
-namespace ExcelRefreshAll
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace ExcelRefreshAll {
+
+    class Program {
+
+        static void Main(string[] args) {
             
-            try
-            {
+            try {
                 Console.WriteLine("Refreshing knowledgecenter connection by opening explorer window...");
 
                 Process.Start(@"\\knowledgecenter.eqt.com@SSL\DavWWWRoot\it\home\gis\GIS_Portal\Shared Documents\Application_Documents");
@@ -52,15 +50,12 @@ namespace ExcelRefreshAll
 
                 workbook = null;
 
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 Console.WriteLine("An exception occurred.");
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("Press the enter key to exit.");
                 Console.Read();
             }
-
         }
     }
 }
